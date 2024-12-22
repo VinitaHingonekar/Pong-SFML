@@ -4,19 +4,17 @@ namespace Gameplay
 {
     Ball::Ball()
     {
-        //ball_sprite.setRadius(radius);
-        //ball_sprite.setPosition(position_x, position_y);
-
         loadTexture();
         initializeVariables();
     }
 
     void Ball::loadTexture()
     {
-        if (!pong_ball_texture.loadFromFile(texture_path))
+        /*if (!pong_ball_texture.loadFromFile(texture_path))
         {
             throw std::runtime_error("Failed to load the ball texure.");
-        }
+        }*/
+        pong_ball_texture.loadFromFile(texture_path);
     }
 
     void Ball::initializeVariables()
@@ -29,5 +27,15 @@ namespace Gameplay
     void Ball::render(RenderWindow* game_window)
     {
         game_window->draw(pong_ball_sprite);
+    }
+
+    void Ball::update()
+    {
+        move();
+    }
+
+    void Ball::move()
+    {
+        ball_sprite.move(velocity);
     }
 }
