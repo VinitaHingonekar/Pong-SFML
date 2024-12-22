@@ -1,6 +1,2 @@
-﻿  Main.cpp
-  GameLoop.cpp
-  GameplayManager.cpp
-  Paddle.cpp
-  Generating Code...
+﻿  Boundary.cpp
   Pong-SFML.vcxproj -> E:\Outscal\DataStructures\Pong\Debug\Pong-SFML.exe

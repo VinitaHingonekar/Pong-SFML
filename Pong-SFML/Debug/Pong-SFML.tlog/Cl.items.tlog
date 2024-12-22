@@ -3,5 +3,6 @@ E:\Outscal\DataStructures\Pong\Source\Core\GameLoop.cpp;E:\Outscal\DataStructure
 E:\Outscal\DataStructures\Pong\Source\Core\GameWindowManager.cpp;E:\Outscal\DataStructures\Pong\Pong-SFML\Debug\GameWindowManager.obj
 E:\Outscal\DataStructures\Pong\Source\Event\EventManager.cpp;E:\Outscal\DataStructures\Pong\Pong-SFML\Debug\EventManager.obj
 E:\Outscal\DataStructures\Pong\Source\Gameplay\Ball\Ball.cpp;E:\Outscal\DataStructures\Pong\Pong-SFML\Debug\Ball.obj
+E:\Outscal\DataStructures\Pong\Source\Gameplay\Boundary\Boundary.cpp;E:\Outscal\DataStructures\Pong\Pong-SFML\Debug\Boundary.obj
 E:\Outscal\DataStructures\Pong\Source\Gameplay\GameplayManager.cpp;E:\Outscal\DataStructures\Pong\Pong-SFML\Debug\GameplayManager.obj
 E:\Outscal\DataStructures\Pong\Source\Gameplay\Paddle\Paddle.cpp;E:\Outscal\DataStructures\Pong\Pong-SFML\Debug\Paddle.obj

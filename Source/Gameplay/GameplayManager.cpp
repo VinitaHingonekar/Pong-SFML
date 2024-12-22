@@ -11,6 +11,7 @@ namespace Gameplay
 	{
 		event_manager = manager;
 		initialize();
+		boundary = new Boundary();
 	}
 
 	void GameplayManager::initialize() 
@@ -22,6 +23,7 @@ namespace Gameplay
 
 	void GameplayManager::render(RenderWindow* game_window)
 	{
+		boundary->render(game_window);
 		ball->render(game_window);
 		player1->render(game_window);
 		player2->render(game_window);
