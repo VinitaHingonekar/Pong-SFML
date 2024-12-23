@@ -10,6 +10,7 @@ namespace Core
 		sound_manager = new SoundManager();
 
 		game_window_manager->initialize();
+		SoundManager::PlayBackgroundMusic();
 	}
 
 	bool GameLoop::isGameRunning()

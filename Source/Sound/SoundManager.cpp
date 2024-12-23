@@ -6,6 +6,10 @@ namespace Sound
     sf::SoundBuffer SoundManager::ballBounce;
     sf::Sound SoundManager::soundEffect;
 
+    sf::Music SoundManager::backgroundMusic;
+    const std::string SoundManager::bgmPath = "Assets/Sounds/Pong_bgm.mp3";
+    float SoundManager::backgroundMusicVolume = 50.0f;
+
     const std::string SoundManager::ballBouncePath = "Assets/Sounds/Ball_Bounce.wav";
 
     SoundManager::SoundManager()
@@ -20,6 +24,11 @@ namespace Sound
 
     void SoundManager::LoadSoundFromFile()
     {
+        if (!backgroundMusic.openFromFile(bgmPath))
+        {
+            std::cerr << "Error loading background music file: " << bgmPath << std::endl;
+            return;
+        }
         if (!ballBounce.loadFromFile(ballBouncePath))
             std::cerr << "Error loading sound file: " << ballBouncePath << std::endl;
     }
@@ -37,5 +46,12 @@ namespace Sound
         }
 
         soundEffect.play();
+    }
+
+    void SoundManager::PlayBackgroundMusic()
+    {
+        backgroundMusic.setVolume(backgroundMusicVolume);
+        backgroundMusic.setLoop(true);// Music keeps playing
+        backgroundMusic.play();// Start the music
     }
 }
