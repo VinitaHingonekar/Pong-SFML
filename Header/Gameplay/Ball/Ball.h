@@ -65,12 +65,24 @@ namespace Gameplay
 
 		void updateDelayTime(float delta_time);
 
+		//score
+		bool had_left_collison = false;
+		bool had_right_collison = false;
+
 	public:
 		Ball();
+
 		void reset();
-		//void update();
 		void update(Paddle* player1, Paddle* player2, TimeService* time_service);
 		void render(RenderWindow* game_window);
+
+		//score collisions
+		bool hasLeftCollisionOccurred();
+		void updateLeftCollisionState(bool value);
+
+		bool hasRightCollisionOccurred();
+		void updateRightCollisionState(bool value);
+
 
 	};
 }
