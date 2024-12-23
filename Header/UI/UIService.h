@@ -27,6 +27,7 @@ namespace UI
 		float right_score_position_y = 30.0f;
 
 		int player1_score = 0;
+		int player2_score = 0;
 
 		void loadFontTexture();
 		void createLeftScoreText();
