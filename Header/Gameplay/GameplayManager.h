@@ -4,9 +4,11 @@
 #include "../../Header/Event/EventManager.h"
 #include "../../Header/Gameplay/Boundary/Boundary.h"
 #include "../../Header/Utility/TimeService.h"
+#include "../../Header/UI/UIService.h"
 
 using namespace Event;
 using namespace Utility;
+using namespace UI;
 
 namespace Gameplay
 {
@@ -25,9 +27,10 @@ namespace Gameplay
 		Boundary* boundary;
 
 		void initialize();
-		EventManager* event_manager;
 
+		EventManager* event_manager;
 		TimeService* time_service;
+		UIService* ui_service;
 
 
 	public:

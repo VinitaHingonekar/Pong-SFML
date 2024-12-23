@@ -11,6 +11,7 @@ namespace Gameplay
 	{
 		time_service = new TimeService();
 		time_service->initialize();
+		ui_service = new UIService;
 
 		event_manager = manager;
 		initialize();
@@ -30,6 +31,7 @@ namespace Gameplay
 		ball->render(game_window);
 		player1->render(game_window);
 		player2->render(game_window);
+		ui_service->render(game_window);
 	}
 
 	void GameplayManager::update()
