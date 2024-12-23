@@ -7,6 +7,12 @@ using namespace sf;
 
 namespace Gameplay
 {
+	enum class BallState
+	{
+		Idle,
+		Moving
+	};
+
 	class Ball
 	{
 	private:
@@ -37,10 +43,12 @@ namespace Gameplay
 		void initializeVariables();
 
 		//moving
-		float ball_speed = 0.2f;
+		float ball_speed = 10.0f;
 		Vector2f velocity = Vector2f(ball_speed, ball_speed);
 
-		void move();
+		void move(TimeService* time_service);
+
+		float speed_multiplier = 50.0f;
 
 		void handlePaddleCollision(Paddle* player1, Paddle* player2);
 		void handleBoudaryCollision();
@@ -49,12 +57,19 @@ namespace Gameplay
 
 		void onCollision(Paddle* player1, Paddle* player2);
 
+		//initial delay
+		float elapsed_delay_time;
+		float delay_duration;
+
+		BallState current_state;
+
+		void updateDelayTime(float delta_time);
 
 	public:
 		Ball();
 		void reset();
 		//void update();
-		void update(Paddle* player1, Paddle* player2);
+		void update(Paddle* player1, Paddle* player2, TimeService* time_service);
 		void render(RenderWindow* game_window);
 
 	};

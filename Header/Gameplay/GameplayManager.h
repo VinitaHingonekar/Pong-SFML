@@ -3,8 +3,10 @@
 #include "Ball/Ball.h"
 #include "../../Header/Event/EventManager.h"
 #include "../../Header/Gameplay/Boundary/Boundary.h"
+#include "../../Header/Utility/TimeService.h"
 
 using namespace Event;
+using namespace Utility;
 
 namespace Gameplay
 {
@@ -24,6 +26,8 @@ namespace Gameplay
 
 		void initialize();
 		EventManager* event_manager;
+
+		TimeService* time_service;
 
 
 	public:
