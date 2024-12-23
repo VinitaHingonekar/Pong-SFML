@@ -2,6 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include "../../../Header/Gameplay/Paddle/Paddle.h"
+#include "../../../Header/Sound/SoundManager.h"
 
 using namespace sf;
 
